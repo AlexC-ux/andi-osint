@@ -9,6 +9,7 @@ import { PikabuEngine } from './services/pikabu/index.js';
 import { PinterestEngine } from './services/pinterest/index.js';
 import { PornhubEngine } from './services/pornhub/index.js';
 import { SoundCloudEngine } from './services/soundcloud/index.js';
+import { TelegramEngine } from './services/telegram/index.js';
 import { TikTokEngine } from './services/tiktok/index.js';
 import { TumblrEngine } from './services/tumblr/index.js';
 import { VkontakteEngine } from './services/vkontakte/index.js';
@@ -33,4 +34,5 @@ export const Engines: (typeof BaseEngine)[] = [
   WikipediaEngine,
   JimbofreeEngine,
   TumblrEngine,
+  TelegramEngine,
 ];
