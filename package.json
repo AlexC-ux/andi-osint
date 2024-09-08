@@ -1,6 +1,6 @@
 {
   "name": "andi-osint",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "build/index.js",
   "type": "module",
   "bin": "node build/index.js",
