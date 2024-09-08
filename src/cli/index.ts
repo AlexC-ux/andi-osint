@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { Search } from '../search/index.js';
 import { getArgs } from './args/index.js';
 import { TextBlocks } from './text-blocks/index.js';
@@ -68,7 +69,17 @@ export async function runCli() {
       const searchResult = await search.findByNickname(nickname);
       const formatedResult = searchResult
         .sort(r => (r.exists ? -1 : 1))
-        .map(r => `[${r.platform}] ${r.exists ? r.url : 'X'}`)
+        .map(result => {
+          let logRecord = '';
+          if (result.exists) {
+            logRecord += chalk.green(`[${result.platform}] `);
+            logRecord += chalk.blue(result.url);
+          } else {
+            logRecord += chalk.red(`[${result.platform}] `);
+            logRecord += chalk.yellow(result.url);
+          }
+          return logRecord;
+        })
         .join('\n');
       console.log(formatedResult);
       console.log();
