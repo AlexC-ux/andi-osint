@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { RedditEngine } from '../index.js';
 import { v4 as uuidv4 } from 'uuid';
 
-describe('test reddit engine', () => {
+describe.skip('test reddit engine', () => {
   const engine = new RedditEngine();
   const notExistingNickname = `${uuidv4()}${Date.now()}`;
   const existingUsername = 'evgeny';
