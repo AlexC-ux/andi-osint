@@ -15,4 +15,9 @@ describe('test github engine', () => {
     const notExistingResult = await ghEngine.nicknameExists(notExistingNickname);
     expect(notExistingResult).to.be.false;
   });
+
+  it('should return correct profile page url', async () => {
+    const profilePageUrl = ghEngine.getProfilePageUrl(existingUsername);
+    expect(!!profilePageUrl).to.be.true;
+  });
 });

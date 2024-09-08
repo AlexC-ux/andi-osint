@@ -14,4 +14,8 @@ export class PayPalEngine extends SimpleTextNotFoundEngine {
       },
     );
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://www.paypal.com/paypalme/${nickname}`;
+  }
 }

@@ -6,4 +6,8 @@ export class PornhubEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://www.pornhub.com',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://rt.pornhub.com/users/${nickname}`;
+  }
 }

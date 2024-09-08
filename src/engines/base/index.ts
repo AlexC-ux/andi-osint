@@ -1,6 +1,9 @@
 import axios, { AxiosInstance, CreateAxiosDefaults } from 'axios';
 
 export class BaseEngine {
+  getProfilePageUrl(nickname: string): string {
+    return nickname;
+  }
   async nicknameExists(nickname: string): Promise<boolean> {
     console.log(nickname);
     throw new Error('Not implemented');

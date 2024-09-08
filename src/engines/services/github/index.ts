@@ -6,4 +6,8 @@ export class GithubEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://github.com',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://github.com/${nickname}`;
+  }
 }

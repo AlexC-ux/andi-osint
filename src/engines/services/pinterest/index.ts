@@ -7,6 +7,7 @@ export class PinterestEngine extends BaseEngine {
       baseURL: 'https://www.pinterest.com',
     });
   }
+
   async nicknameExists(nickname: string): Promise<boolean> {
     try {
       const response = await this.http.get(`${nickname}/_saved/`, {
@@ -29,5 +30,9 @@ export class PinterestEngine extends BaseEngine {
     } catch (error) {
       return false;
     }
+  }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://www.pinterest.com/${nickname}/_saved`;
   }
 }

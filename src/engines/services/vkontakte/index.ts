@@ -6,4 +6,8 @@ export class VkontakteEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://vk.com',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://vk.com/${nickname}`;
+  }
 }

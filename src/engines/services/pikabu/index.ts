@@ -6,4 +6,8 @@ export class PikabuEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'http://pikabu.ru',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `http://pikabu.ru/@${nickname}`;
+  }
 }

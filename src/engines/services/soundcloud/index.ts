@@ -6,4 +6,8 @@ export class SoundCloudEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://soundcloud.com',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://soundcloud.com/${nickname}`;
+  }
 }

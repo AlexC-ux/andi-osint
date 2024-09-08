@@ -6,4 +6,8 @@ export class WikipediaEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://ru.wikipedia.org',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://ru.wikipedia.org/wiki/Участник:${nickname}`;
+  }
 }

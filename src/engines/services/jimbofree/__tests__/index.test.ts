@@ -14,4 +14,9 @@ describe('test jimbofree engine', () => {
     const notExistingResult = await aknigaEngine.nicknameExists(notExistingNickname);
     expect(notExistingResult).to.be.false;
   });
+
+  it('should return correct profile page url', async () => {
+    const profilePageUrl = aknigaEngine.getProfilePageUrl(existingUsername);
+    expect(!!profilePageUrl).to.be.true;
+  });
 });

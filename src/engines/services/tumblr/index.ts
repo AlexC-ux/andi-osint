@@ -14,4 +14,8 @@ export class TumblrEngine extends BaseEngine {
       return false;
     }
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://${nickname}.tumblr.com`;
+  }
 }

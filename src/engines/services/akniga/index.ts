@@ -6,4 +6,8 @@ export class AknigaEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'http://akniga.org/profile/',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `http://akniga.org/profile/${nickname}`;
+  }
 }

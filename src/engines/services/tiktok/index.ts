@@ -11,4 +11,8 @@ export class TikTokEngine extends SimpleTextNotFoundEngine {
       },
     );
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://www.tiktok.com/@${nickname}`;
+  }
 }

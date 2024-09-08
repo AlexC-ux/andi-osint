@@ -6,4 +6,8 @@ export class PatreonEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://www.patreon.com',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://www.patreon.com/${nickname}/creators`;
+  }
 }

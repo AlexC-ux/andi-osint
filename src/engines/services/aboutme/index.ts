@@ -6,4 +6,8 @@ export class AboutMeEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://about.me/',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://about.me/${nickname}`;
+  }
 }

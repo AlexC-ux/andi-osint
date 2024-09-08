@@ -6,4 +6,8 @@ export class YaMusicEngine extends SimpleUrlNotFoundEngine {
       baseURL: 'https://music.yandex.ru',
     });
   }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://music.yandex.ru/users/${nickname}/playlists`;
+  }
 }

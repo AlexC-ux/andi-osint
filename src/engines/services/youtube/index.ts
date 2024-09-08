@@ -6,6 +6,7 @@ export class YoutubeEngine extends BaseEngine {
       baseURL: 'https://youtube.com',
     });
   }
+
   async nicknameExists(nickname: string): Promise<boolean> {
     try {
       const response = await this.http.get(`user/${nickname}`, {
@@ -18,5 +19,9 @@ export class YoutubeEngine extends BaseEngine {
     } catch (error) {
       return false;
     }
+  }
+
+  override getProfilePageUrl(nickname: string): string {
+    return `https://youtube.com/user/${nickname}`;
   }
 }

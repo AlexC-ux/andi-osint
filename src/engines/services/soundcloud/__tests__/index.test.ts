@@ -15,4 +15,9 @@ describe.skip('test soundcloud engine', () => {
     const notExistingResult = await engine.nicknameExists(notExistingNickname);
     expect(notExistingResult).to.be.false;
   });
+
+  it('should return correct profile page url', async () => {
+    const profilePageUrl = engine.getProfilePageUrl(existingUsername);
+    expect(!!profilePageUrl).to.be.true;
+  });
 });
