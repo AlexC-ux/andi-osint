@@ -1,6 +1,8 @@
 # ANDI OSINT
 
-**ANDI OSINT** is a tool that allows you to gather information about a person or organization using various sources.
+**ANDI OSINT** is an OSINT (open source intelligence) tool that allows you to gather information about a person or organization using various sources.
+
+If you want to support the project, you can give it a ⭐
 
 ## Installation
 
@@ -44,3 +46,5 @@ Example: npx andi-osint -n alexc-ux
 16. tumblr.com
 
 </details>
+
+### Output example (single nickname search)
