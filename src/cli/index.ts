@@ -65,9 +65,12 @@ export async function runCli() {
       console.log();
       const searchResult = await search.findByNickname(nickname);
       const formatedResult = searchResult
-        .sort(r => (r.exists ? 1 : 0))
-        .map(r => `[${r.platform}] ${r.exists ? 'Exists' : 'X'}`);
+        .sort(r => (r.exists ? 1 : -1))
+        .map(r => `[${r.platform}] ${r.exists ? r.url : 'X'}`)
+        .join('\n');
       console.log(formatedResult);
+      console.log();
+      console.log();
       return;
     }
   }

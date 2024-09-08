@@ -5,9 +5,11 @@ export class Search {
     return await Promise.all(
       Engines.map(async engineClass => {
         const classInstance = new engineClass();
+        const exists = await classInstance.nicknameExists(nickname);
         return {
           platform: classInstance.platformName,
-          exists: await classInstance.nicknameExists(nickname),
+          exists,
+          url: exists ? classInstance.getProfilePageUrl(nickname) : 'Not Found',
         };
       }),
     );
