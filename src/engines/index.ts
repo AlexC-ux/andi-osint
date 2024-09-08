@@ -8,6 +8,7 @@ import { PayPalEngine } from './services/paypal/index.js';
 import { PikabuEngine } from './services/pikabu/index.js';
 import { PinterestEngine } from './services/pinterest/index.js';
 import { PornhubEngine } from './services/pornhub/index.js';
+import { RedditEngine } from './services/reddit/index.js';
 import { SoundCloudEngine } from './services/soundcloud/index.js';
 import { TelegramEngine } from './services/telegram/index.js';
 import { TikTokEngine } from './services/tiktok/index.js';
@@ -35,4 +36,5 @@ export const Engines: (typeof BaseEngine)[] = [
   JimbofreeEngine,
   TumblrEngine,
   TelegramEngine,
+  RedditEngine,
 ];
