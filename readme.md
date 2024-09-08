@@ -44,5 +44,7 @@ Example: npx andi-osint -n alexc-ux
 14. wikipedia.org
 15. jimdofree.com
 16. tumblr.com
+17. telegram
+18. reddit
 
 </details>
