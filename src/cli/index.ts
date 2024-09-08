@@ -52,7 +52,7 @@ export async function runCli() {
         .listServices()
         .map((service, index) => `${index + 1}. ${service}`)
         .join('\n');
-      const resultMessage = [TextBlocks.servicesLst, '', '', services, '', ''].join('\n');
+      const resultMessage = [TextBlocks.servicesLst, '', '', services].join('\n');
       console.log(resultMessage);
       return;
     }
@@ -82,8 +82,6 @@ export async function runCli() {
         })
         .join('\n');
       console.log(formatedResult);
-      console.log();
-      console.log();
       return;
     }
   }
