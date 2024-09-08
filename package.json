@@ -1,10 +1,10 @@
 {
   "name": "andi-osint",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "build/index.js",
   "type": "module",
   "bin": {
-    "andi-osint": "node build/index.js"
+    "andi-osint": "build/index.js"
   },
   "scripts": {
     "build": "tsc",
