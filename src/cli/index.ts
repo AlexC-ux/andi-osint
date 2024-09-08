@@ -18,14 +18,14 @@ export async function runCli() {
     '',
     'Installation: npm i -g andi-osint',
     '',
-    'Usage: andi-osint [options]',
+    'Usage: npx andi-osint [options]',
     '',
     'Options:',
     '   -h, --help,            Display this help message',
     '   -n, --nickname         Nickname for the search',
     '   -ls, --list            List of available services',
     '',
-    'Example: andi-osint -n alexc-ux',
+    'Example: npx andi-osint -n alexc-ux',
   ].join('\n');
 
   const argsKeys = Object.keys(args);
@@ -63,6 +63,10 @@ export async function runCli() {
   for (const element of singleNicknameSearchArgs) {
     if (argsKeys.includes(element)) {
       const nickname = args[element];
+      if (!nickname) {
+        console.log('Not passed value for nickname');
+        return;
+      }
       console.log(`Searching for nickname: ${nickname}`);
       console.log();
       console.log();

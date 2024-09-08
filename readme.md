@@ -1,14 +1,24 @@
 # ANDI OSINT
 
-__ANDI OSINT__ is a tool that allows you to gather information about a person or organization using various sources.
+**ANDI OSINT** is a tool that allows you to gather information about a person or organization using various sources.
+
+## Installation
+
+```
+npm i -g andi-osint
+```
 
 ## Description
 
 ```
+Usage: npx andi-osint [options]
+
 Options:
    -h, --help,            Display this help message
    -n, --nickname         Nickname for the search
    -ls, --list            List of available services
+
+Example: npx andi-osint -n alexc-ux
 ```
 
 ### Supported services
