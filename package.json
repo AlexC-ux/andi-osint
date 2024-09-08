@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "main": "build/index.js",
   "type": "module",
-  "bin": "build/index.js",
+  "bin": "node build/index.js",
   "scripts": {
     "build": "tsc",
     "test": "ts-mocha --type-check src/**/*.test.ts --timeout 5000",
