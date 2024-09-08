@@ -15,6 +15,8 @@ export async function runCli() {
     TextBlocks.howToUse,
     '',
     '',
+    'Installation: npm i -g andi-osint',
+    '',
     'Usage: andi-osint [options]',
     '',
     'Options:',
@@ -22,7 +24,7 @@ export async function runCli() {
     '   -n, --nickname         Nickname for the search',
     '   -ls, --list            List of available services',
     '',
-    '',
+    'Example: andi-osint -n alexc-ux',
   ].join('\n');
 
   const argsKeys = Object.keys(args);
@@ -65,7 +67,7 @@ export async function runCli() {
       console.log();
       const searchResult = await search.findByNickname(nickname);
       const formatedResult = searchResult
-        .sort(r => (r.exists ? 1 : -1))
+        .sort(r => (r.exists ? -1 : 1))
         .map(r => `[${r.platform}] ${r.exists ? r.url : 'X'}`)
         .join('\n');
       console.log(formatedResult);
