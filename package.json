@@ -1,6 +1,6 @@
 {
   "name": "andi-osint",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "build/index.js",
   "type": "module",
   "bin": {
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "test": "ts-mocha --type-check src/**/*.test.ts --timeout 5000",
-    "dev": "tsc && node build/index.js"
+    "dev": "build/index.js"
   },
   "author": "",
   "license": "ISC",
