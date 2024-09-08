@@ -1,10 +1,9 @@
 import { expect } from 'chai';
-import { v4 as uuidv4 } from 'uuid';
 import { YaMusicEngine } from '../index.js';
 
 describe('test ya-music engine', () => {
   const engine = new YaMusicEngine();
-  const notExistingNickname = `${uuidv4()}${uuidv4()}${Date.now()}`;
+  const notExistingNickname = `player${Date.now()}`;
   const existingUsername = 'sygma';
   it('should return true if nickname exists', async () => {
     const existingResult = await engine.nicknameExists(existingUsername);

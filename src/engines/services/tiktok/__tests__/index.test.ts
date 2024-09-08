@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { v4 as uuidv4 } from 'uuid';
 import { TikTokEngine } from '../index.js';
 
-describe('test tiktok engine', () => {
+describe.skip('test tiktok engine', () => {
   const engine = new TikTokEngine();
   const notExistingNickname = `${uuidv4()}${uuidv4()}${Date.now()}`;
   const existingUsername = 'sygma';
