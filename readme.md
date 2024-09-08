@@ -6,6 +6,8 @@ _ANDI OSINT_ is a tool that allows you to gather information about a person or o
 
 ### Sources
 
+<details>
+  <summary>Sources list</summary>
 - github.com
 - vk.com
 - akniga.org
@@ -22,3 +24,4 @@ _ANDI OSINT_ is a tool that allows you to gather information about a person or o
 - wikipedia.org
 - jimdofree.com
 - tumblr.com
+</details>
