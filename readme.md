@@ -1,8 +1,8 @@
 # ANDI OSINT
 
-## Description
-
 __ANDI OSINT__ is a tool that allows you to gather information about a person or organization using various sources.
+
+## Description
 
 ```
 Options:
