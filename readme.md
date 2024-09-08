@@ -46,5 +46,3 @@ Example: npx andi-osint -n alexc-ux
 16. tumblr.com
 
 </details>
-
-### Output example (single nickname search)
