@@ -8,4 +8,4 @@ async function searchNickname() {
 }
 searchNickname();
 
-console.log(search.listServices());
+console.log(search.listServices().join('\n'));
