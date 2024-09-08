@@ -4,6 +4,7 @@
   "main": "build/index.js",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "test": "ts-mocha --type-check src/**/*.test.ts --timeout 5000",
     "dev": "tsc && node build/index.js"
   },
