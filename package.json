@@ -1,9 +1,11 @@
 {
   "name": "andi-osint",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "build/index.js",
   "type": "module",
-  "bin": "node build/index.js",
+  "bin": {
+    "andi-osint": "node build/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "test": "ts-mocha --type-check src/**/*.test.ts --timeout 5000",
